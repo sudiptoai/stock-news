@@ -32,40 +32,31 @@ The app ships with **rich mock data** and works fully offline without an API key
 
 ## Getting Started
 
-### Prerequisites
+See **[TESTING.md](./TESTING.md)** for the full local testing guide, including
+platform-specific instructions, troubleshooting, and API key setup.
 
-- Node.js 18+
-- Expo CLI: `npm install -g expo-cli`
-- iOS Simulator (macOS) or Android Emulator / Expo Go on a physical device
-
-### Installation
+### Quick start (2 commands)
 
 ```bash
-git clone https://github.com/sudiptoai/stock-news.git
-cd stock-news
 npm install
+npm start     # opens the Expo dev menu; press w for web, i for iOS, a for Android
+```
+
+> No API key needed – the app works offline with built-in mock data.
+
+### Unit tests
+
+```bash
+npm test            # run once and exit
+npm run test:watch  # re-run on every file save
 ```
 
 ### API Key (optional)
 
 ```bash
 cp .env.example .env
-# Edit .env and set EXPO_PUBLIC_FINNHUB_API_KEY to your Finnhub free key
-```
-
-### Run
-
-```bash
-npm start          # Opens Expo dev menu
-npm run ios        # iOS simulator
-npm run android    # Android emulator
-npm run web        # Web browser
-```
-
-### Tests
-
-```bash
-npm test
+# Edit .env and set EXPO_PUBLIC_FINNHUB_API_KEY to your free Finnhub key
+# https://finnhub.io – free tier: 60 requests/minute
 ```
 
 ## Project Structure

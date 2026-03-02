@@ -105,7 +105,8 @@ function StockDetailModal({
                 { label: "Day High", value: formatCurrency(stock.high) },
                 { label: 'Day Low', value: formatCurrency(stock.low) },
                 ...(stock.marketCap
-                  ? [{ label: 'Market Cap', value: `$${(stock.marketCap / 1000).toFixed(1)}T` }]
+                  // Finnhub marketCapitalization is in millions USD → convert to full dollars
+                  ? [{ label: 'Market Cap', value: formatCurrency(stock.marketCap * 1_000_000) }]
                   : []),
               ].map(({ label, value }) => (
                 <View key={label} style={detailStyles.statItem}>

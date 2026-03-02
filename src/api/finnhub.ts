@@ -214,7 +214,7 @@ export async function fetchRecommendations(
     currentPrice: q.c,
     analyst: 'Consensus',
     reason: buildReasonText(rating, latest),
-    updatedAt: Date.now() / 1000,
+    updatedAt: Math.floor(Date.now() / 1000),
     strongBuy: latest.strongBuy,
     buy: latest.buy,
     hold: latest.hold,

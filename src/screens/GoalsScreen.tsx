@@ -54,7 +54,7 @@ function AddGoalModal({ onClose }: { onClose: () => void }) {
       type,
       targetAmount: target,
       currentAmount: isNaN(current) ? 0 : current,
-      deadline: Math.floor(Date.now() / 1000) + parseInt(years, 10) * 365 * 86400,
+      deadline: Math.floor(Date.now() / 1000) + parseInt(years, 10) * 365 * 86400, // ~365d/yr approximation
       riskLevel,
       sectors,
     });
